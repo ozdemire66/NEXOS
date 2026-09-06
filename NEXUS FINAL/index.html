@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-box">
+                <img src="nexus-icon.jpeg" alt="NEXUS">
+            </div>
+
+            <div>
+                <div class="logo-name">NEXUS</div>
+                <div class="logo-sub">COMMAND SYSTEM</div>
+            </div>
+        </div>
+
+        <button id="newChatButton" class="new-chat">
+            + Yeni Sohbet
+        </button>
+
+        <div class="menu">
+
+            <button class="menu-btn active">
+                <span>⌂</span>
+                Kontrol Merkezi
+            </button>
+
+            <button id="clearButton" class="menu-btn">
+                <span>↻</span>
+                Hafızayı Temizle
+            </button>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <div class="status-title">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+            <div class="status-row">
+                <span>AI CORE</span>
+                <b>NEMOTRON</b>
+            </div>
+
+            <div class="status-row">
+                <span>NETWORK</span>
+                <b id="networkStatus">CHECKING</b>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="header">
+
+            <div>
+                <div class="small-title">
+                    NEXUS COMMAND CENTER
+                </div>
+
+                <h1>Kontrol Merkezi</h1>
+            </div>
+
+            <div class="header-right">
+
+                <span id="clock">00:00:00</span>
+
+                <span class="online" id="onlineStatus">
+                    <i></i> ONLINE
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <section class="hero">
+
+            <div class="nexus-circle">
+                <img src="nexus-icon.jpeg" alt="NEXUS">
+            </div>
+
+            <div class="hero-text">
+
+                <div class="small-title">
+                    PERSONAL COMMAND SYSTEM
+                </div>
+
+                <h2>NEXUS <span>ONLINE</span></h2>
+
+                <p>
+                    Sistem aktif. Komutunu bekliyorum.
+                </p>
+
+                <div class="ready">
+                    <i></i>
+                    SYSTEM READY
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat">
+                <div class="stat-icon">AI</div>
+                <div>
+                    <small>AI CORE</small>
+                    <strong>NEMOTRON</strong>
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">VO</div>
+                <div>
+                    <small>VOICE</small>
+                    <strong id="voiceStatus">READY</strong>
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">NW</div>
+                <div>
+                    <small>NETWORK</small>
+                    <strong id="networkCard">CHECKING</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="chat">
+
+            <div class="chat-header">
+
+                <div>
+                    <div class="small-title">
+                        NEXUS TERMINAL
+                    </div>
+
+                    <h3>AI Conversation</h3>
+                </div>
+
+                <span class="active-label">
+                    <i></i> ACTIVE
+                </span>
+
+            </div>
+
+
+            <div id="messages" class="messages">
+
+                <div class="message nexus">
+
+                    <div class="avatar">
+                        <img src="nexus-icon.jpeg" alt="NEXUS">
+                    </div>
+
+                    <div class="bubble">
+
+                        <b>NEXUS</b>
+
+                        <p>
+                            Sistem başlatıldı.
+                            Sana nasıl yardımcı olabilirim?
+                        </p>
+
+                        <small>ŞİMDİ</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-area">
+
+                <!-- MİKROFON -->
+                <button id="micButton" class="mic">
+                    🎤
+                </button>
+
+
+                <!-- SES SEÇİCİ -->
+                <select id="voiceSelect" class="voice-select">
+
+                    <option value="tr-TR-AhmetNeural">
+                        Ahmet
+                    </option>
+
+                    <option value="tr-TR-EmelNeural">
+                        Emel
+                    </option>
+
+                    <option value="en-US-AriaNeural">
+                        Aria
+                    </option>
+
+                    <option value="en-US-GuyNeural">
+                        Guy
+                    </option>
+
+                    <option value="en-US-JennyNeural">
+                        Jenny
+                    </option>
+
+                </select>
+
+
+                <!-- SES AÇ / KAPAT -->
+                <button id="voiceToggle" class="voice-toggle">
+                    🔊
+                </button>
+
+
+                <!-- MESAJ -->
+                <input
+                    id="messageInput"
+                    type="text"
+                    placeholder="NEXUS'a bir komut ver..."
+                    autocomplete="off"
+                >
+
+
+                <!-- GÖNDER -->
+                <button id="sendButton" class="send">
+                    GÖNDER
+                </button>
+
+            </div>
+
+
+            <div class="hint">
+                ENTER = Gönder • 🎤 = Sesli Komut • 🔊 = Konuşma
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="auth.js?v=3"></script>
+<script src="app.js?v=40"></script>
+
+</body>
+</html>
